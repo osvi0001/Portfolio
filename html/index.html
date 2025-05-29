@@ -6,8 +6,6 @@
     <title>Hjem</title>
     <link rel="stylesheet" href="/css/index.css">
     <link rel="stylesheet" href="/css/custom.css">
-    <link rel="stylesheet" href="/css/projekter.css">
-    <link rel="stylesheet" href="/css/om mig.css">
 </head>
 
 <body>
@@ -15,14 +13,27 @@
     <!--HEADER-->
     <header class="header_1">
         <a href="index.html" class="nav_logo"><img src="/img/Oscar-logo2.png"></a>
-        <nav class="nav">
-              <ul class="nav_list">
-                    <li class="nav_item"><a href="index.html">HJEM</a></li>
-                    <li class="nav_item"><a href="projekter.html">PROJEKTER</a></li>
-                    <li class="nav_item"><a href="om mig.html">OM MIG</a></li>
-                </ul>
+        <div class="off-screen-menu">
+            <ul class="nav_list">
+                <li class="nav_item"><a href="index.html">HJEM</a></li>
+                <li class="nav_item"><a href="projekter.html">PROJEKTER</a></li>
+                <li class="nav_item"><a href="om mig.html">OM MIG</a></li>
+            </ul>
+        </div>
+        <nav>
+            <div class="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </nav>
-
+        <nav class="desktop_nav">
+        <ul class="nav_list_desktop">
+            <li class="nav_item_desktop"><a href="index.html">HJEM</a></li>
+            <li class="nav_item_desktop"><a href="projekter.html">PROJEKTER</a></li>
+            <li class="nav_item_desktop"><a href="om mig.html">OM MIG</a></li>
+        </ul>
+        </nav>
     </header>
 
     <!--MAIN-->
@@ -46,7 +57,7 @@
 
     </main>
 
-    <!--GSAP-->
+    <script src="/js/main.js"></script>
 </body>
 
 </html>

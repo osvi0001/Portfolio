@@ -4,6 +4,96 @@ body{
   background-position: center;
 }
 
+.desktop_nav{
+  display: none;
+}
+
+/*BURGER MENU UDFOLDET*/
+.off-screen-menu{
+  background-color: rgba(159, 159, 159);
+  height: 100vh;
+  width: 100%;
+  max-width: 450px;
+  position: fixed;
+  top: 0;
+  right: -450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  font-size: 3em;
+  transition: .3 ease;
+  z-index: 1;
+}
+.off-screen-menu.active{
+  right: 0;
+}
+.nav_list a.visited{
+  color: black;
+}
+.nav_list a{
+  text-decoration: none;
+  color: black;
+}
+.nav_list{
+  list-style: none;
+}
+
+
+/*BURGER MENU SET-UP*/
+nav{
+  padding-right: 1rem;
+  display: flex; /*Skubber menuen til højre i nav*/
+  background-color: transparent;
+}
+.burger{
+  height: 50px;
+  width: 50px;
+  margin-left: auto;
+  position: relative;
+}
+.burger span{
+  height: 3px;
+  width: 100%;
+  background-color: rgb(0, 0, 0);
+  border-radius: 25px;
+  position: absolute;
+  top: 50%; /*afstanden første span og andet span*/
+  left: 50%; /*afstanden mellem menu og højre side*/
+  transform: translate(-50%, -50%); /*afstanden mellem menu og højre side, og mellem menu og toppen (x og y aksel)*/
+  transition: .5s ease;
+  z-index: 2;
+}
+.burger span:nth-child(1){
+  top: 25%;
+}
+.burger span:nth-child(3){
+  top: 75%;
+}
+
+/*BURGER MENU AKTIV*/
+
+.burger.active span{
+  background-color: rgb(240, 233, 233);
+}
+.burger.active span:nth-child(1){
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.burger.active span:nth-child(2){
+  opacity: 0;
+}
+.burger.active span:nth-child(3){
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+
+
+
+
+
+
 /* HEADER */
 .header_1{
   border-bottom: 2px solid black;
@@ -12,31 +102,12 @@ body{
   position: relative;
   top: 0;
 }
-
-/* NAV */
-.nav_list{
-  display: flex;  /*Navigation ved siden af hinanden*/
-  gap: 30px;
-  list-style: none;
-  margin-right: 30px;
-} 
-nav a{
-  text-decoration: none;
-  color: black;
-  font-size: 20px;
-}
-nav ul a:hover{
-  text-decoration: underline;
-
-}
-nav a:visited{
-  color: black;
-}
 .nav_logo img{
   margin: 10px;
   min-width: 150px;
   max-width: 15%;
-}
+} 
+  
 
 main{
   padding-top: 50px
@@ -64,6 +135,7 @@ main{
   justify-content: center; /* CENTRERER IMAGE */
   align-items: center;
   margin-right: 100px;
+  z-index: -1;
 }
 .forside_img2{
   display: none;
@@ -73,6 +145,34 @@ main{
 
 
 @media screen and (min-width: 768px){
+  /* NAV */
+
+.burger{
+  display: none;
+}
+.desktop_nav{
+  display: flex;
+}
+.nav_list_desktop{
+  display: flex;  /*Navigation ved siden af hinanden*/
+  gap: 30px;
+  list-style: none;
+  margin-right: 30px;
+} 
+.nav_list_desktop a{
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+}
+.nav_list_desktop a:hover{
+  text-decoration: underline;
+
+}
+.nav_list_desktop a:visited{
+  color: black;
+}
+  
+
   .forside_img{
     display: none;
   }
