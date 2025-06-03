@@ -7,34 +7,290 @@
     <link rel="stylesheet" href="/css/index.css">
     <link rel="stylesheet" href="/css/custom.css">
     <link rel="stylesheet" href="/css/projekter.css">
-    <link rel="stylesheet" href="/css/om mig.css">
+
+    <!--     <link rel="stylesheet" href="/css/om mig.css"> -->
 </head>
+
 <body>
-        <!--HEADER-->
-        <header class="header_1">
-            <a href="index.html" class="nav_logo"><img src="/img/Oscar-logo2.png"></a>
-            <div class="off-screen-menu">
-                <ul class="nav_list">
-                    <li class="nav_item"><a href="index.html">HJEM</a></li>
-                    <li class="nav_item"><a href="projekter.html">PROJEKTER</a></li>
-                    <li class="nav_item"><a href="om mig.html">OM MIG</a></li>
-                </ul>
+    <!--HEADER-->
+    <header class="header_1">
+        <a href="index.html" class="nav_logo"><img src="/img/Oscar-logo2.png"></a>
+        <div class="off-screen-menu">
+            <ul class="nav_list">
+                <li class="nav_item"><a href="index.html">HJEM</a></li>
+                <li class="nav_item"><a href="projekter.html">PROJEKTER</a></li>
+                <li class="nav_item"><a href="om mig.html">OM MIG</a></li>
+            </ul>
+        </div>
+        <nav>
+            <div class="burger">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
-            <nav>
-                <div class="burger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </nav>
-            <nav class="desktop_nav">
+        </nav>
+        <nav class="desktop_nav">
             <ul class="nav_list_desktop">
                 <li class="nav_item_desktop"><a href="index.html">HJEM</a></li>
                 <li class="nav_item_desktop"><a href="projekter.html">PROJEKTER</a></li>
                 <li class="nav_item_desktop"><a href="om mig.html">OM MIG</a></li>
             </ul>
-            </nav>
-        </header>
-        <main></main>
-        <script src="/js/main.js"></script>
+        </nav>
+    </header>
+    <main>
+        <!--SLIDESHOW CONTAINER-->
+        <section class="slideshow-container">
+            <!--SLIDESHOW-->
+            <div class="mySlides fade" id="slide1">
+                <a href="#T2"><img class="slide-image" src="/img/projekter/website.png" style="height: 435px;"
+                        alt=""></a>
+                <div class="Tema-text">
+                    <h2>TEMA 2</h2>
+                </div>
+            </div>
+
+            <div class="mySlides fade" id="slide2">
+                <a href="#T3"><img class="slide-image" src="/img/projekter/cpt.png" style="height: 435px;" alt=""></a>
+                <div class="Tema-text">
+                    <h2>TEMA 3</h2>
+                </div>
+            </div>
+
+            <div class="mySlides fade" id="slide3">
+                <a href="#T4"><img class="slide-image" src="/img/projekter/T4-slide.png" style="height: 435px;"
+                        alt=""></a>
+                <div class="Tema-text">
+                    <h2>TEMA 4</h2>
+                </div>
+            </div>
+
+            <div class="mySlides fade" id="slide4">
+                <a href="#T5"><img class="slide-image" src="/img/projekter/noexcuses.png" style="height: 435px;"
+                        alt=""></a>
+                <div class="Tema-text">
+                    <h2>TEMA 5</h2>
+                </div>
+            </div>
+
+            <!-- FREM OG TILBAGE BUTTONS-->
+            <a class="prev" onclick="plusSlides(-1)">&#10094</a>
+            <a class="next" onclick="plusSlides(1)">&#10095</a>
+
+            <!-- PRIKKER -->
+            <div style="text-align: center;">
+                <span class="dot" onclick="currenSlide(1)"></span>
+                <span class="dot" onclick="currenSlide(2)"></span>
+                <span class="dot" onclick="currenSlide(3)"></span>
+                <span class="dot" onclick="currenSlide(4)"></span>
+            </div>
+        </section>
+        <br>
+        <section class="projekter">
+            <section class="tema2" id="T2">
+                <h1>TEMA 2 - GRUNDLÆGGENDE WEB</h1>
+                <section class="tema2-indhold">
+                    <div class="order_02-1">
+                        <div>
+                            <h3>Webudvikling</h3>
+                            <p> Gennem dette forløb fik vi en basal forståelse for webudvikling og
+                                design. Vi introduceret til noget af den fundamentale viden en multimediedesigner skal
+                                beside. Vi lærte om nogle af de grundlæggende begreber og principper man skal kende
+                                inden
+                                for interfacedesign, såsom “konsistens” der sikrer, at brugeren kan genkende gentagende
+                                visuelle elementer, og dermed forvente en konsistens i elementernes funktion gennem
+                                hjemmesiden, eller “gestaltlovene” som beskriver hvordan vi registrerer visuelle inputs
+                                og
+                                finder sammenhæng i dem. Derudover blev vi introduceret til HTML og CSS, hvortil vi
+                                lærte om
+                                media queries, grids og flex, og om vigtigheden af at kunne lave responsivt design, så
+                                siden
+                                er brugervenlig på både mobil og computer/tablet denne viden skulle vi bruge til vores
+                                studiestartsprøve. .</p>
+                        </div>
+                        <div class="img_02-1"> <a href="https://omlangeni.dk/website/galleri.html"><img src="/img/projekter/T2.2.png"
+                                    alt="Screendump af galleri"></a>
+                                    
+                                </div>
+                                
+                                    
+                    </div>
+                    <div class="order_02-2">
+
+                        <div>
+                            <h3>studiestartsprøve</h3>
+                            <p>Til vores studiestartsprøve fik vi som opgave at kode et responsivt website efter et
+                                givent
+                                wireframe og layout-diagram. Her fik vi mulighed til at praktisere noget af den læring
+                                vi
+                                har fået gennem temaet. Jeg gjorde f.eks. brug af grid til at sætte et galleri op, hvor
+                                billederne skulle opstilles på en bestemt måde der krævede at jeg både kunne arbejde med
+                                kolonner og rækker. Jeg brugte flex til at kode siden “operative systemer”, da jeg fandt
+                                det
+                                nemmest og mest effektivt at opsætte 3 kolonner af samme størrelse sådan. Jeg anvendte
+                                bl.a.
+                                gestaltloven om lukkethed ved at sætte en border på min min nav, og have en anden
+                                baggrundsfarve på både min nav og min main end på selve baggrunden, så brugeren nemmere
+                                ville kunne differentiere dem fra resten af siden. </p>
+                        </div>
+                        <div class="img_02-2"> <a href="https://omlangeni.dk/website/index.html"><img src="/img/projekter/T2.1.png"
+                                    alt="Screendump fra studiestartsprøven"></a>
+
+                    </div>
+                </section>
+
+            </section>
+            <section class="tema3" id="T3">
+                <h1>TEMA 3 - GRUNDLÆGGENDE UX/UI</h1>
+                <section class="tema3-indhold">
+                    <div class="order_03-1">
+                        <div>
+                            <h3>Proces & Dokumentation</h3>
+                            <p> I dette forløb fik vi læring og erfaring med udvalgte UX/UI-metoder. Vi gik dybere ned i
+                                læringen om ideudviklingsmetoder som brainstorming, og vi
+                                fik et af indblik i hvordan man dokumenterer og præsenterer en proces, og deler den op i
+                                faser.
+                                <br>
+                                <strong>Research & Idé</strong> <em>(målgruppe, designassociationer, moodboard,
+                                    styletile).</em>
+                                <br>
+                                <strong>Digital Prototype & Bruger-tests</strong> <em>(wireframe, lay-out, 5sec test,
+                                    likert test).</em>
+                                <br>
+                                <strong>Kodet Site</strong> <em>(HTML, CSS, JS, impementering af design og
+                                    struktur).</em>
+                                <br>
+                                <strong>Præsentation</strong> <em>(præsentation af proces og endelige produkt).</em>
+                                <br>
+                                Derudover lærte vi om sammenhænget mellem brugere og brugergrænseflader, og om hvordan
+                                det sammenhæng lægger fundationen, for de designvalg man tager som designer. Vi blev
+                                introduceret til designmønstre og lærte om hvordan brugere leder efter og genkender
+                                genanvendelige løsninger på designproblemer, f.eks. at søgelinjen oftest befinder sig
+                                øverst på et website og har et bestemt visuelt udtryk der gør den nem at finde og
+                                genkende.
+                            </p>
+                        </div>
+                        <div class="img_03-2"><a
+                                href="https://www.figma.com/design/Xvrz3SY9LclGejY7DHe9tu/Untitled?node-id=0-1&p=f&t=3sjd2C5Cn6ie2rFM-0"><img
+                                    src="/img/projekter/T3.png" alt="Screendump af proces fra figma"></a>
+                            <a
+                                href="https://www.figma.com/design/Xvrz3SY9LclGejY7DHe9tu/Untitled?node-id=0-1&p=f&t=3sjd2C5Cn6ie2rFM-0"><img
+                                    src="/img/projekter/T3.2.png" alt="Screendump af svar fra likert test"></a>
+                        </div>
+                    </div>
+                    <div class="order_03-2">
+                        <div>
+                            <h3>Emnesite (03.01.01)</h3>
+                            <p>Vores opgave for dette forløb var at designe og lave vores eget website om et
+                                valgfrit emne. Jeg startede med ideudvikling og research, gennem brainstorming fandt jeg
+                                frem til at jeg ville lave en rejseguide til Cape Town. Gennem research fandt jeg frem
+                                til
+                                noget af det indhold jeg ville have på siden, her lavede jeg f.eks. user-stories, for at
+                                finde ud af hvad hvordan mit indhold skulle passe til målgruppen. Jeg lavede tre
+                                styletiles som
+                                jeg
+                                testede gennem en likert-test for at se hvilken der fik det bedste respons og hvor vidt
+                                den
+                                passede til min designassociationer. Jeg lavede wireframes og et udkast til løsningen
+                                som
+                                jeg lavede en 5 sekunders test på. Ud fra den fandt jeg ud af at det ikke var tydligt
+                                nok at
+                                se at det var en rejseguide, hvilket ledte mig til at ændre teksten og tekststørrelsen
+                                på
+                                forsiden for at gøre det mere tydeligt. Min efterfølgende test viste bedre resultater.
+                            </p>
+                        </div>
+                        <div class="img_03-1"><a href="https://omlangeni.dk/GuideCapeTown/index.html"><img
+                                    src="/img/projekter/welcome-cpt.png" alt="Screendump af forside paa Emnesite"></a></div>
+                    </div>
+                    </div>
+                </section>
+            </section>
+
+            <section class="tema4" id="T4">
+                <h1>TEMA 4 - GRUNDLÆGGENDE ANIMATION</h1>
+                <section class="tema4-indhold">
+                    <div>
+                        <h3>Emergency site</h3>
+                        <p>
+                            I dette forløb dykkede vi dybere ned i idégenereringsprocessen, og vi blev introduceret til
+                            programmeringssproget Javascript som bruges
+                            til kodning af mere dynamiske hjemmesider, vi lærte også til Adobe Illustrator,
+                            et softwareprogram til udvikling af vektorgrafik, som bruges til at kreere, redigere og
+                            designe grafik. Jeg brugte illustrator til bl.a. at lave mit logo, hvor jeg brugte pen-tool
+                            til at få et O til at ligne en fugl
+                            <br> <br>
+                            Opgaven for dette forløb var at designe og udvikle et “emergency-site”, hvori der skulle
+                            være info-grafik, en webformular og der skulle etableres “dark mode” og pop-up vinduer
+                            gennem JS. Jeg skitserede først min info-grafik med blyant og papir og rentegnede den
+                            derefter i illustrator i vektorformat hvilket gør den skalerbar uden at kvaliteten
+                            forringes. Jeg brugte JS til at kode min webformular og til etablere “dark mode”.
+                            I screendumpet af JS koden ses det hvordan jeg med document.querySelector finder
+                            HTML-elementet med id'et switchBtn3, kalder funktionen changeMode3 med addEventListener
+                            "click”. Finder elementet med id dark, igen med document.querySelector, som styrer hvilket
+                            CSS-stylesheet der er aktivt.
+                        </p>
+                    </div>
+                    <div>
+                        <div> <a href="https://omlangeni.dk/maageattack/index.html"><img src="/img/projekter/T4.1.png"
+                                    alt="Logo fra emergency-site"></a></div>
+                        <div> <a href="https://omlangeni.dk/maageattack/register.html"><img src="/img/projekter/js.png"
+                                    alt="eksempel på kode"></a></div>
+
+                    </div>
+                </section>
+            </section>
+            <section class="tema5" id="T5">
+                <h1>TEMA 5 - GRUNDLÆGGENDE INDHOLD</h1>
+                <section class="tema5-indhold">
+                    <div class="order_05-1">
+
+                        <div>
+                            <h3>Sandkassesite 05.01.01</h3>
+                            <p>Vi blev i tema 5 introduceret til Adobe After Effects og
+                                Adobe Photoshop. Vi fik til opgave at lave et sandkassesite (05.01.01) med fokus på
+                                indhold.
+                                Her skulle vi bl.a. lave en skud liste til de billeder der skulle være på vores side.
+                                Her
+                                havde jeg f.eks. “nærbillede af basketbold”, billedet redigerede jeg i photoshop, og
+                                brugte
+                                det også i After Effects til at lave en animation som jeg kunne implementere på sitet
+                                via
+                                LottieFiles.
+                            </P>
+                        </div>
+                        <div class="img_05-1">
+                            <div> <a href="https://omlangeni.dk/basket/index.html"><img src="/img/projekter/basket.png"
+                                        alt="screendump fra sandkassesite"></a></div>
+                        </div>
+                    </div>
+                    <div class="order_05-2">
+
+                        <div>
+                            <h3>Virksomhedssite 05.02.01</h3>
+                            <p>
+                                Her skulle vi i grupper redesigne et website for en virksomhed. Vi lavede relevant
+                                research på virksomheden NoExcuses.co, og vi
+                                undersøgte
+                                den stilreference vi havde fået ift layout, designstil osv. Problemformuleringen for os
+                                var
+                                at redesigne websitet så det blev mindre maskulint og mere velkomne, samt at lave det ud
+                                fra
+                                den stilreference vi havde fået. For at løse dette problem lavede og testede vi både
+                                style
+                                tiles fra det eksisterende site samt vores eget bud på et nyt site. Gennem vores test
+                                fandt
+                                vi frem til at vores style tile som havde nogle lysere toner og blødere fonttyper, var
+                                mindre maskulint og mere velkomne. Derefter kodet vi sitet udfra vores style tile og
+                                wireframe som var baseret på stilreferencen.
+                        </div>
+                        <div class="img_05-2"><a href="https://omlangeni.dk/tema5-noexcuses/index.html"><img
+                                    src="/img/projekter/noexcuses2.png" alt="Screendump fra virksomhedssite"></a>
+                        </div>
+                    </div>
+                </section>
+            </section>
+        </section>
+    </main>
+    <script src="/js/main.js"></script>
+    <script src="/js/slide.js"></script>
 </body>
