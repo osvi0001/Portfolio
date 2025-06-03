@@ -16,25 +16,30 @@ body{
   max-width: 450px;
   position: fixed;
   top: 0;
-  right: -450px;
+  right: -450px; /*får menuen ud af skærmen*/
   display: flex;
-  flex-direction: column;
+  flex-direction: column; /*items står vertikalt som en kollone*/
   justify-content: center;
   text-align: center;
   font-size: 3em;
-  transition: .3 ease;
+  transition: .5s ease;
   z-index: 1;
 }
 .off-screen-menu.active{
   right: 0;
 }
-.nav_list a.visited{
-  color: black;
-}
 .nav_list a{
   text-decoration: none;
   color: black;
+  font-size: 40px;
 }
+.nav_list a:hover{
+  text-decoration: underline;
+}
+.nav_list a:visited{
+  color: black;
+}
+
 .nav_list{
   list-style: none;
 }
@@ -63,6 +68,7 @@ nav{
   transform: translate(-50%, -50%); /*afstanden mellem menu og højre side, og mellem menu og toppen (x og y aksel)*/
   transition: .5s ease;
   z-index: 2;
+  backdrop-filter: blur(5px);
 }
 .burger span:nth-child(1){
   top: 25%;
@@ -74,7 +80,7 @@ nav{
 /*BURGER MENU AKTIV*/
 
 .burger.active span{
-  background-color: rgb(240, 233, 233);
+  background-color: rgb(0, 0, 0);
 }
 .burger.active span:nth-child(1){
   top: 50%;
@@ -119,10 +125,9 @@ main{
 }
 .forside_portfolio{
   padding-top: 0;
-  font-size: 10vw;
+  font-size: 12vw;
   display: flex;
   justify-content: center;
-
 }
 .forside_mmd{
   display: flex;
@@ -162,7 +167,7 @@ main{
 .nav_list_desktop a{
   text-decoration: none;
   color: black;
-  font-size: 20px;
+  font-size: 25px;
 }
 .nav_list_desktop a:hover{
   text-decoration: underline;
@@ -180,6 +185,17 @@ main{
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: auto;
+    border-radius: 150px;
+  }
+  .forside_img2 img{
+    filter: grayscale(100%);
+    border-top-left-radius: 150px;
+    border-top-right-radius: 150px;
+  }
+  .forside_img2 img:hover{
+    filter: grayscale(0%);
+    margin-top: -10px;
   }
   .forside_portfolio{
     font-size: 100px;
