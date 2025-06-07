@@ -1,0 +1,20 @@
+@font-face {
+    font-family: Source Sans Pro;
+    src: url(../fonts/SourceSansPro-Regular.ttf);
+}
+
+h3{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 25px;
+}
+h2{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
+}
+h1{
+    font-size: 30px;
+}
+p{
+    font-family: Source Sans Pro;
+    line-height: 1.5em;
+}

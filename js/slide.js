@@ -1,34 +1,33 @@
-let slideIndex = 1; //Starter slideshowet på slide nummer 1.
-showSlides(slideIndex); //Kører funktionen, så det første slide vises.
+document.addEventListener("DOMContentLoaded", () => {
+  const slides = document.querySelectorAll(".mySlides");
+  const dots = document.querySelectorAll(".dot");
 
-// Next/previous controls
-function plusSlides(n) {
-  //Giver mulighed for at gå frem/tilbage med n antal slides (f.eks. -1 for forrige, +1 for næste).
-  showSlides((slideIndex += n));
-}
+  if (slides.length === 0 || dots.length === 0) return;
 
-// Thumbnail image controls
-function currentSlide(n) {
-  //
-  showSlides((slideIndex = n));
-}
+  let slideIndex = 1;
 
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {
-    slideIndex = 1;
+  function showSlides(n) {
+    if (n > slides.length) slideIndex = 1;
+    if (n < 1) slideIndex = slides.length;
+
+    slides.forEach((slide) => (slide.style.display = "none"));
+    dots.forEach((dot) => dot.classList.remove("active"));
+
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].classList.add("active");
   }
-  if (n < 1) {
-    slideIndex = slides.length;
+
+  function plusSlides(n) {
+    showSlides((slideIndex += n));
   }
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
+
+  function currentSlide(n) {
+    showSlides((slideIndex = n));
   }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex - 1].style.display = "block";
-  dots[slideIndex - 1].className += " active";
-}
+
+  // Export to global scope so HTML onclicks still work
+  window.plusSlides = plusSlides;
+  window.currentSlide = currentSlide;
+
+  showSlides(slideIndex);
+});
