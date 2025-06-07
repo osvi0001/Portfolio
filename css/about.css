@@ -99,6 +99,10 @@ h2 {
         margin-top: 10px;
     }
 
+    .færdigheder p {
+        min-width: 12vw;
+    }
+
     .færdigheder img {
         height: 100px;
     }
